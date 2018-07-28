@@ -140,3 +140,7 @@ RBOOT_CONF = $(ROOT)bootloader/firmware_prebuilt/blank_config.bin
 ifeq (,$(wildcard $(RBOOT_BIN)))
 RBOOT_BIN=$(RBOOT_PREBUILT_BIN)
 endif
+
+# compiled firmware flashing arguments
+FW_FILE_ADDR ?= 0x1000
+FW_FILE_ARGS = $(FW_FILE_ADDR) $(FW_FILE)
